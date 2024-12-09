@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A basic HTML template" />
+    <meta name="author" content="Your Name" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Staatliches&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Staatliches&display=swap");
+
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .red-hat-display-uniquifier {
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+      }
+      /* Navbar */
+      .navbar {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        background-color: white;
+        border-bottom: 1px solid #ededed;
+      }
+
+      .logo h1 {
+        color: black;
+        font-weight: bold;
+        font-size: 35px;
+        padding: 5px 20px;
+        cursor: pointer;
+      }
+
+      .navbar a {
+        text-decoration: none;
+      }
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+      }
+      .nav-links a {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 8px 15px;
+      }
+
+      .additional-options {
+        display: flex;
+        align-items: start;
+        gap: 20px;
+        font-size: 15px;
+        margin-left: 635px;
+      }
+      .additional-options img {
+        width: 20px;
+        height: 15px;
+      }
+
+/* MAin */
+      .back-button {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #989898; /* Text color */
+    font-size: 16px; /* Text size */
+    font-weight: bold; /* Makes text bold */
+    display: flex;
+    align-items: center;
+}
+
+.back-icon {
+    margin-right: 5px; /* Space between the arrow and text */
+    font-size: 18px; /* Arrow size */
+    
+     /* Arrow color */
+}
+
+
+
+
+      
+
+      /* Footer */
+      footer {
+        width: 100%;
+        bottom: 0;
+        background: #32e9f2;
+        color: black;
+        height: 220px;
+        margin-top: 50px;
+      }
+      .row {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+      .col p {
+        padding-top: 20px;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 13px;
+      }
+      .col h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: normal;
+        margin-bottom: 12px;
+      }
+
+      .col a {
+        color: black;
+        padding-left: 0px;
+        padding-right: 20px;
+        padding-top: 0;
+        padding-bottom: 0px;
+        font-size: 30px;
+      }
+      .col h4 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: normal;
+        margin-top: 24px;
+        font-size: 18px;
+      }
+
+      .wrapper {
+        width: 300px;
+        max-width: 100%;
+        position: absolute;
+      }
+      .wrapper input {
+        border: 1px solid white;
+        border-radius: 50px;
+        padding: 1rem 2rem;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 15px;
+        height: 40px;
+      }
+
+      .wrapper button {
+        border: none;
+        background: #32e9f2;
+        border-radius: 50%;
+        height: 35px;
+        aspect-ratio: 1;
+        position: absolute;
+        right: 0;
+        width: 35px;
+        color: black;
+        margin-top: 17px;
+        margin-right: 6px;
+      }
+      .wrapper i {
+        font-size: 20px;
+        color: #2a2a2a;
+      }
+
+      .col2 {
+        text-align: left;
+      }
+      .col2 h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: normal;
+        margin-bottom: 12px;
+      }
+      .col2 a {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 13px;
+        margin-bottom: 6px;
+      }
+
+
+.tap-heading-text{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+.tap-heading-text h1{
+    font-family: "Bebas Neue", sans-serif;
+    color: black;
+}
+
+.tap-peragrap{
+    margin-top: 5px;
+    text-align: center;
+    font-family: "Red Hat Display", sans-serif;
+    
+}
+.download{
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Red Hat Display", sans-serif;
+    text-decoration: underline;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+
+}
+.card{
+    width: 400px;
+    padding: 20px;
+    border: 1px black solid;
+    border-radius: 20px;
+    justify-content: center;
+}
+.card .fa-solid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.card h3{
+    font-family: "Red Hat Display", sans-serif;
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+.card h4{
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 200;
+    color: #878787;
+    text-align: center;
+}
+
+.card .button{
+    margin-top: 10px;
+    display: flex;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-left: 120px;
+    margin-bottom: 10px;
+}
+.proceed-button{
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+}
+.proceed-button a{
+    font-family: "Bebas Neue", sans-serif;
+    color: black;
+    text-decoration: none;
+    border: 1px solid #32e9f2;
+    padding: 8px 30px;
+    background-color: #32e9f2;
+    border-radius: 30px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="home.html">
+        <div class="logo">
+          <h1>DISWRAP</h1>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="discover.html">DISCOVER</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <div class="additional-options">
+        <span>SHIP TO</span>
+        <img
+          src="5d724478-2c34-4262-9e22-fdc2b4ebf674.png"
+          alt="Country Flag"
+        />
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </nav>
+
+    <div class="back-button">
+        <a href="javascript:history.back()" class="back-link">
+            <span class="back-icon"><i class="fa-solid fa-angle-left"></i></span> <!-- Left arrow -->
+            <span class="back-text">Back</span>
+        </a>
+    </div>
+
+    <div class="tap-heading-text">
+        <h1>upload your own design</h1>
+    </div>
+
+    <div class="tap-peragrap">
+        <p>Download this product's template and design instructions</p>
+    </div>
+
+    <div class="download">
+        <i class="fa-solid fa-download"></i>
+        <p>Guidelines: Greasproof Paper - 210 x 148 mm</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <i class="fa-solid fa-file-arrow-up"></i>
+            <h3>Upload your artwork</h3>
+            <h4>Maximum file size 50MB</h4>
+            <button class="button">Browse File</button>
+
+
+        </div>
+    </div>
+    <div class="proceed-button">
+        <a href="proceedCheckout.html">Proceed to checkout</a>
+    </div>
+    
+    <div>
+
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col">
+          <h1>diswrap</h1>
+          <p>
+            Your namber one side selling <br />
+            and buying <br />
+            clothes, cosmatics and home <br />
+            goods.
+          </p>
+        </div>
+
+        <div class="col">
+          <h3>follow us</h3>
+          <a href="https://www.facebook.com/login.php/"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/accounts/login/?hl=en"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://pk.linkedin.com/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://x.com/i/flow/login?lang=en"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+
+          <h4>join our newsletter</h4>
+          <div class="wrapper">
+            <input type="text" placeholder="Enter Your Email" />
+            <button>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col2">
+          <h3>help</h3>
+          <a href="">About Us <br /></a>
+          <a href="">Discover <br /></a>
+          <a href="">Get a Sample <br /></a>
+          <a href="">Contact Us <br /></a>
+          <a href="">Term and Conditions <br /></a>
+          <a href="">Privacy Policy <br /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

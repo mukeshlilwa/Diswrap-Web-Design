@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A basic HTML template" />
+    <meta name="author" content="Your Name" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Staatliches&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Staatliches&display=swap");
+
+      .staatliches-regular {
+        font-family: "Staatliches", sans-serif;
+      }
+
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* Full screen height */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .red-hat-display-uniquifier {
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* Navbar */
+      /* Navbar */
+      /* Navbar */
+      .mainForm {
+        width: 100%;
+        height: 58vh; /* Top half of the screen */
+        background-color: black;
+        color: white;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      .navbar a{
+            text-decoration: none;
+        }
+        .logo h1 {
+            color: white;
+            font-weight: bold;
+            font-size: 35px;
+            padding: 5px 20px;
+            cursor: pointer;
+
+        }
+
+      .navbar {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        background-color: black;
+      }
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 8px 15px;
+      }
+      .nav-links a.active,
+      .nav-links:hover {
+        color: #32e9f2;
+      }
+      .additional-options {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 15px;
+        margin-left: auto;
+      }
+      .additional-options img {
+        width: 20px;
+        height: 15px;
+      }
+      .mainHeading h1 {
+        padding-top: 100px;
+        padding-left: 40px;
+        font-family: "Staatliches", sans-serif;
+        font-size: 62px;
+      }
+      .mainPeragraph p {
+        padding-top: 20px;
+        padding-left: 40px;
+        font-size: 18px;
+        font-family: "Red Hat Display", sans-serif;
+      }
+
+      .features {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        justify-content: space-between;
+        padding: 0px 40px;
+        margin-bottom: 10px;
+      }
+      .features div {
+        color: white;
+        font-weight: bold;
+      }
+      .font1 {
+        font-size: 13px;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+      .font11 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      /* Navbar */
+      /* Navbar */
+      /* Navbar */
+
+      /* Bottom HAlf */
+      .bottom-half {
+        background-color: white;
+        flex: 1; /* Remaining screen height */
+      }
+
+      .sampleForm {
+        margin-top: 20px;
+        max-width: 2000px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 13px;
+      }
+      .bottomHeading {
+        padding-left: 7%;
+        padding-top: 4%;
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .left-side,
+      .right-side {
+        flex: 1 1 48%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 14px;
+        width: 80%;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .form-check {
+        display: flex;
+        align-items: center; /* Vertically aligns checkbox and text */
+        gap: 10px; /* 10px space between checkbox and text */
+        margin: 0; /* Remove any additional margin */
+      }
+
+      .form-check input[type="checkbox"] {
+        transform: scale(
+          1.5
+        ); /* Increase checkbox size (scale factor can be adjusted) */
+        margin: 0;
+        width: auto;
+        height: auto;
+        border-radius: none;
+      }
+
+      .form-check label {
+        margin-left: 10px; /* Adds 10px space between checkbox and label text */
+        font-size: 13px; /* Optional: Adjust font size if needed */
+        color: black; /* Optional: Adjust text color */
+      }
+
+      .delivery {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .delivery i {
+        font-size: 20px;
+      }
+
+      
+
+      .submit-btn {
+        background-color: #32e9f2;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        text-align: center;
+        width: 80%;
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+      @media (max-width: 768px) {
+        .row {
+          flex-direction: column; /* Stack columns for smaller screens */
+          gap: 20px;
+        }
+
+        .left-side,
+        .right-side {
+          flex: 1 1 100%;
+        }
+      }
+
+      footer {
+        width: 100%;
+        bottom: 0;
+        background: #32e9f2;
+        color: black;
+        height: 220px;
+        margin-top: 100px;
+      }
+      .row {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+      .col p {
+        padding-top: 20px;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 13px;
+      }
+      .col h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: normal;
+        margin-bottom: 12px;
+      }
+
+      .col a {
+        color: black;
+        padding-left: 0px;
+        padding-right: 20px;
+        padding-top: 0;
+        padding-bottom: 0px;
+        font-size: 30px;
+      }
+      .col h4 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: normal;
+        margin-top: 24px;
+        font-size: 18px;
+      }
+
+      .wrapper {
+        width: 300px;
+        max-width: 100%;
+        position: absolute;
+      }
+      .wrapper input {
+        border: 1px solid white;
+        border-radius: 50px;
+        padding: 1rem 2rem;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 15px;
+        height: 40px;
+      }
+
+      .wrapper button {
+        border: none;
+        background: #32e9f2;
+        border-radius: 50%;
+        height: 35px;
+        aspect-ratio: 1;
+        position: absolute;
+        right: 0;
+        width: 35px;
+        color: black;
+        margin-top: 17px;
+        margin-right: 6px;
+      }
+      .wrapper i {
+        font-size: 20px;
+        color: #2a2a2a;
+      }
+      .col h1 {
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+      .col2 {
+        text-align: left;
+      }
+      .col2 h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: normal;
+        margin-bottom: 12px;
+      }
+      .col2 a {
+        display: flex;
+        text-decoration: none;
+        color: black;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <!-- HTML Part -->
+    <!-- HTML Part -->
+    <!-- HTML Part -->
+  </head>
+  <body>
+    <form class="mainForm">
+      <nav class="navbar">
+       <a href="home.html"> <div class="logo"><h1>DISWRAP</h1></div></a>
+        <ul class="nav-links">
+          <li><a href="products.html" class="active">PRODUCTS</a></li>
+          <li><a href="discover.html">DISCOVER</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="additional-options">
+          <span>SHIP TO</span>
+          <img
+            src="5d724478-2c34-4262-9e22-fdc2b4ebf674.png"
+            alt="Country Flag"
+          />
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </nav>
+      <div class="mainHeading">
+        <h1>get a diswraped simple box</h1>
+      </div>
+      <div class="mainPeragraph">
+        <p>
+          Fill out the form with your shipping information and we will ship you
+          a sample pack for free within a few days. We ship with EU
+        </p>
+      </div>
+      <div class="features">
+        <div class="f3">
+          <p class="font1">FREE EXPERT</p>
+          <p class="font11">DESIGN</p>
+        </div>
+        <div class="f2">
+          <p class="font1">100% PRICE</p>
+          <p class="font11">GUARANTEE</p>
+        </div>
+        <div class="f3">
+          <p class="font1">AlWAYS FREE</p>
+          <p class="font11">SHOPPING</p>
+        </div>
+      </div>
+    </form>
+
+    <!-- Top Half Section -->
+    <div class="bottom-half">
+      <div class="bottomHeading">
+        <h1>Request a Sample</h1>
+      </div>
+      <form class="sampleForm">
+        <div class="row">
+          <!-- Left Side -->
+          <div class="left-side">
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Enter your company name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="form-group">
+              <label for="zipcode">Zip Code</label>
+              <input
+                type="text"
+                id="zipcode"
+                name="zipcode"
+                placeholder="Enter your zip code"
+              />
+            </div>
+          </div>
+          <!-- Right Side -->
+          <div class="right-side">
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="USA">Pakistan</option>
+                <option value="Canada">India</option>
+                <option value="UK">Nepal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="country">City</label>
+              <select id="country" name="country">
+                <option value="">Select City</option>
+                <option value="USA">Lahore</option>
+                <option value="Canada">Islamabad</option>
+                <option value="UK">Faisalababd</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Enter your message"
+              ></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="terms" name="terms" />
+              <label for="terms"
+                >I would like to get news about packaging, promotionsand special
+                <br />
+                offers from Diswrap. Unsubscribe at ant time.</label
+              >
+            </div>
+            <div class="delivery">
+              <i class="fa-solid fa-bicycle"></i>
+              <p>Delivery in 1 week</p>
+            </div>
+            <button type="submit" class="submit-btn">Send me a Sample box</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- #FOOTER-->
+    <footer>
+      <div class="row">
+        <div class="col">
+          <h1>DISWRAP</h1>
+          <p>
+            Your namber one side selling <br />
+            and buying <br />
+            clothes, cosmatics and home <br />
+            goods.
+          </p>
+        </div>
+
+        <div class="col">
+          <h3>follow us</h3>
+          <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://pk.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/i/flow/login?lang=en"><i class="fa-brands fa-twitter"></i></a>
+
+
+          <h4>join our newsletter</h4>
+          <div class="wrapper">
+            <input type="text" placeholder="Enter Your Email" />
+            <button>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="col2">
+          <h3>help</h3>
+          <a href="">About Us <br /></a>
+          <a href="">Discover <br /></a>
+          <a href="">Get a Sample <br /></a>
+          <a href="">Contact Us <br /></a>
+          <a href="">Term and Conditions <br /></a>
+          <a href="">Privacy Policy <br /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A basic HTML template">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Staatliches&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Staatliches&display=swap');
+        
+        .staatliches-regular {
+  font-family: "Staatliches", sans-serif;
+
+}
+
+
+
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full screen height */
+            display: flex;
+            flex-direction: column;
+        }
+
+.red-hat-display-uniquifier {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        /* Navbar */
+        /* Navbar */
+        /* Navbar */
+        .mainForm {
+            width: 100%;
+            height: 58vh; /* Top half of the screen */
+            background-color: black;
+            color: white;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+        .navbar a{
+            text-decoration: none;
+        }
+        .logo h1 {
+            color: white;
+            font-weight: bold;
+            font-size: 35px;
+            padding: 5px 20px;
+            cursor: pointer;
+
+        }
+        
+        .navbar {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            background-color: black;
+        }
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 8px 15px;
+        }
+        .nav-links a.active,
+        .nav-links:hover {
+            color: #32E9F2;
+        }
+       
+        .nav-links a.active,
+        .nav-links:hover {
+            color: #32E9F2;
+        }
+        .additional-options {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 15px;
+            margin-left: auto;
+        }
+        .additional-options img {
+            width: 20px;
+            height: 15px;
+        }
+        .mainHeading h1 {
+            padding-top: 100px;
+            padding-left: 40px;
+
+        }
+        .mainPeragraph p {
+            padding-top: 20px;
+            padding-left: 40px;
+            font-size: 13px;
+            font-family: "Red Hat Display", sans-serif;
+        }
+        .productButton {
+            padding-left: 40px;
+            padding-top: 30px;
+        }
+        .productButton .b1 {
+            color: black;
+            text-decoration: none;
+            border: 1px #32E9F2 solid;
+            background-color: #32E9F2;
+            border-radius: 15px;
+            padding: 5px 25px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .productButton .b2 {
+            color: black;
+            text-decoration: none;
+            border: 1px white solid;
+            background-color: white;
+            border-radius: 15px;
+            padding: 5px 25px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .features {
+            display: flex;
+            align-items: center;
+            margin-top: 55px;
+            justify-content: space-between;
+            padding: 0px 40px;
+            margin-bottom: 10px;
+        }
+        .features div {
+            
+            color: white;
+            font-weight: bold;    
+        }
+        .font1 {
+            font-size: 10px;
+            margin: 0;
+            padding-bottom: 5px;
+        }
+        .font11 {
+            font-size: 16px;
+            margin: 0;
+        }
+        .bottom-half {
+            background-color: white;
+            flex: 1; /* Remaining screen height */
+        }
+       /* Navbar */
+        /* Navbar */
+        /* Navbar */
+       
+       
+        /* Bottom HAlf */
+        .bottomHeading {
+            padding-left: 50px;
+            padding-top: 40px;
+            font-family: "Staatliches", sans-serif;
+            margin-bottom: 20px;
+        }
+      
+        .bottomHeading2 {
+            padding-left: 50px;
+            padding-top: 40px;
+            font-family: "Staatliches", sans-serif;
+            margin-bottom: 20px;
+        }
+       
+
+
+
+        
+        .container {
+            width: 100%;
+            padding-left: 50px; 
+            overflow-x: scroll; 
+                 
+        }
+        .container::-webkit-scrollbar {
+           display: none;
+             }
+
+        .cards-row {
+            display: flex;
+            gap: 40px;
+            align-content: center;
+            
+                   }
+        
+        .card11 {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 360px;
+            height: 390px;
+
+        }
+        .card11 img {
+            height: 400px;
+            width: 100%;
+        
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+            font-family: "Staatliches", sans-serif;
+
+        }
+        .card-text {
+            font-size: 14px;
+            color: #3D3D3D;
+            margin-bottom: 20px;
+        }
+
+
+
+
+        .container2 {
+            width: 900px;
+            padding-left: 50px;  
+                
+        }
+        .cards-row {
+            display: flex;
+            gap: 40px;
+            align-content: center;
+            
+                   }
+        
+        .card11 {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 360px;
+            height: 390px;
+
+        }
+        .card11 img {
+            height: 400px;
+            width: 100%;
+        
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+            font-family: "Staatliches", sans-serif;
+
+        }
+        .card-text {
+            font-size: 14px;
+            color: #3D3D3D;
+            margin-bottom: 20px;
+        }
+
+
+
+        .bottom-title{
+            margin-top: 70px;
+            padding-left: 50px;
+            font-family: "Staatliches", sans-serif;
+        }
+
+ /* Parent container to align .bottom-title-Pera and .faq-container */
+.row-container {
+  display: flex;
+  justify-content: space-between; /* Adjust space between items */
+  align-items: flex-start; /* Align items to the top */
+   /* Add spacing around the row */
+}
+
+/* Adjust .bottom-title-Pera */
+.bottom-title-Pera {
+  padding-left: 50px;
+  font-size: 15px;
+  color: #3D3D3D;
+  margin-top: 20px;
+  flex: 1; /* Allow it to take available space */
+}
+
+/* FAQs */
+.faq-container {
+  max-width: 500px;
+  background: white;
+  text-align: end;
+  margin-right: 50px; /* Space between .bottom-title-Pera and .faq-container */
+  margin-bottom: 100px;
+  justify-content: end;
+  flex: 1; /* Allow it to take available space */
+}
+
+.faq {
+  border-bottom: 2px solid #505050;
+  margin-top: 30px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  cursor: pointer;
+  font-family: "Staatliches", sans-serif;
+  color: #505050;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.plus-icon {
+  flex: 1;
+  justify-content: end;
+  margin-bottom: 10px;
+}
+
+.plus-icon .faq-icon {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  color: #505050;
+}
+
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background: #32E9F2;
+    color: black;
+    height: 220px;
+
+
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 20px;
+
+}
+.col p{
+    padding-top: 20px;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 13px;
+}
+.col h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.col a{
+    color: black;
+    padding-left: 0px;
+    padding-right: 20px;
+    padding-top: 0;
+    padding-bottom: 0px;
+    font-size: 30px;
+
+}
+.col h4{
+
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+.wrapper{
+    width: 300px;
+    max-width: 100%;
+    position: absolute;
+}
+.wrapper input {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 100%;
+    font-size: 15px;   
+    margin-top: 15px;
+    height: 40px;
+}
+
+.wrapper button {
+    border: none;
+    background: #32E9F2;
+    border-radius: 50%;
+    height: 35px;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 0;
+    width: 35px;
+    color: black;
+    margin-top: 17px;
+    margin-right: 6px;
+}
+.wrapper i{
+    font-size: 20px;
+    color: #2A2A2A;
+
+
+}
+
+.col2 {
+            text-align: left;
+        }
+        .col2 h3 {
+            font-family: "Bebas Neue", sans-serif;
+    font-weight: normal;
+    margin-bottom: 12px;
+        }
+        .col2 a {
+            display: flex; 
+            text-decoration: none;
+    color: black;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 13px;
+            margin-bottom: 6px;
+        }
+    
+
+
+    </style>
+
+
+   <!-- HTML Part -->
+    <!-- HTML Part -->
+     <!-- HTML Part -->
+</head>
+<body>
+    <!-- Top Half Section -->
+    <form class="mainForm">
+        <nav class="navbar">
+            <a href="home.html"><div class="logo"><h1>DISWRAP</h1></div></a>
+            <ul class="nav-links">
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="discover.html" class="active">DISCOVER</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="additional-options">
+                <span>SHIP TO</span>
+                <img src="5d724478-2c34-4262-9e22-fdc2b4ebf674.png" alt="Country Flag">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </nav>
+        <div class="mainHeading">
+            <h1>DISCOVER</h1>
+        </div>
+        <div class="mainPeragraph">
+            <p>Be unforgettable with your own fully customizable packaging. High quality, low minimums, and delivered <br> pronto. All in just a couple of clicks.</p>
+        </div>
+        
+        <div class="features">
+            <div class="f3">
+                <p class="font1">FREE EXPERT</p>
+                <p class="font11">DESIGN</p>
+            </div>
+            <div class="f2">
+                <p class="font1">100% PRICE</p>
+                <p class="font11">GUARANTEE</p>
+            </div>
+            <div class="f3">
+                <p class="font1">AlWAYS FREE</p>
+                <p class="font11">SHOPPING</p>
+            </div>
+        </div>
+    </form>
+    <!-- Bottom Half Section -->
+    <div class="bottom-half">
+        <!-- Add any content here if needed -->
+         <div class="bottomHeading">
+            <h1>Articles</h1>
+         </div>
+         <div class="container">
+            <div class="cards-row">
+                <!-- Card 1 -->
+                <div class="card-wrapper">
+                    <div class="card11">
+                        <img src="img1.jpg" alt="Card Image 1">
+                    </div>
+                    <h3 class="card-title">title</h3>
+                    <p class="card-text">This is a description for the first card. It contains brief details about the content or purpose.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-wrapper">
+                    <div class="card11">
+                        <img src="img2.jpg" alt="Card Image 2">
+                    </div>
+                    <h3 class="card-title">title</h3>
+                    <p class="card-text">This is a description for the second card. It contains brief details about the content or purpose.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-wrapper">
+                    <div class="card11">
+                        <img src="img3.jpg" alt="Card Image 3">
+                    </div>
+                    <h3 class="card-title">title</h3>
+                    <p class="card-text">This is a description for the third card. It contains brief details about the content or purpose.</p>
+                </div>
+                 <!-- Card 4 -->
+                <div class="card-wrapper">
+                    <div class="card11">
+                        <img src="img3.jpg" alt="Card Image 3">
+                    </div>
+                    <h3 class="card-title">title</h3>
+                    <p class="card-text">This is a description for the third card. It contains brief details about the content or purpose.</p>
+                </div>
+            </div>
+        </div>
+
+        
+    <div class="bottomHeading2">
+        <h1>Use Cases</h1>
+     </div>
+    <div class="container2">
+        <div class="cards-row">
+            <!-- Card 1 -->
+            <div class="card-wrapper">
+                <div class="card11">
+                    <img src="img1.jpg" alt="Card Image 1">
+                </div>
+                <h3 class="card-title">title</h3>
+                <p class="card-text">This is a description for the first card. It contains brief details about the content or purpose.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-wrapper">
+                <div class="card11">
+                    <img src="img2.jpg" alt="Card Image 2">
+                </div>
+                <h3 class="card-title">title</h3>
+                <p class="card-text">This is a description for the second card. It contains brief details about the content or purpose.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-wrapper">
+                <div class="card11">
+                    <img src="img3.jpg" alt="Card Image 3">
+                </div>
+                <h3 class="card-title">title</h3>
+                <p class="card-text">This is a description for the third card. It contains brief details about the content or purpose.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-title">
+        <h1>your questions, answered</h1>
+    </div>
+
+    <div class="row-container">
+        <div class="bottom-title-Pera">
+            We offer secure storage, ensuring all your <br> data is protected from unauthorized <br> access.
+        </div>
+      
+        <div class="faq-container">
+          <div class="faq">
+            <div class="faq-question">
+              <span>what are your minimum order quantities?</span>
+              <div class="plus-icon">
+                <button class="faq-icon">+</button>
+              </div>
+            </div>
+            
+          </div>
+      
+          <div class="faq">
+            <div class="faq-question">
+              <span>how does the design process work?</span>
+              <div class="plus-icon">
+                <button class="faq-icon">+</button>
+              </div>
+            </div>
+
+          </div>
+          <div class="faq">
+            <div class="faq-question">
+              <span>do you offer samples?</span>
+              <div class="plus-icon">
+                <button class="faq-icon">+</button>
+              </div>
+            </div>
+            
+          </div>
+      
+          <div class="faq">
+            <div class="faq-question">
+              <span>are thee any hidden costs?</span>
+              <div class="plus-icon">
+                <button class="faq-icon">+</button>
+              </div>
+            </div>
+            
+        </div>
+        <div class="faq">
+            <div class="faq-question">
+              <span>which countries do you offer delivery for free?</span>
+              <div class="plus-icon">
+                <button class="faq-icon">+</button>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+     </div> 
+<!-- # -->
+ <footer>
+    <div class="row">
+        <div class="col">
+            <h1>diswrap</h1>
+            <p>Your namber one side selling <br> and buying <br> clothes, cosmatics and home <br> goods.</p>
+        </div>
+
+        <div class="col">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://pk.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/i/flow/login?lang=en"><i class="fa-brands fa-twitter"></i></a>
+
+            <h4>join our newsletter</h4>
+            <div class="wrapper">
+                <input type="text" placeholder="Enter Your Email" />
+                <button>
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+            </div>
+        </div>
+ <div  class="col2"><h3>help</h3>
+           <a href="">About Us <br></a>
+           <a href="">Discover <br></a>
+           <a href="">Get a Sample <br></a>
+           <a href="">Contact Us <br></a>
+           <a href="">Term and Conditions <br></a>
+           <a href="">Privacy Policy <br></a>
+        </div>        
+    </div>
+    
+</footer>
+ 
+</body>
+</html>
